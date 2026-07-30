@@ -22,6 +22,7 @@ public static class PlayerCameraPatch
     private static Func<string, string, string> _getPinyin;
     private static Func<string, string, string> _getPinyinInitials;
     private static string _pinyinFilterCache;
+    private static string _savedRecipeFilter;
 
     private static void EnsurePinyinLibrary()
     {
@@ -78,6 +79,7 @@ public static class PlayerCameraPatch
     private static void PreRefreshRecipeList(PlayerCamera __instance)
     {
         _pinyinFilterCache = null;
+        _savedRecipeFilter = null;
 
         var filter = __instance.recipeFilter;
         if (string.IsNullOrEmpty(filter))
@@ -95,6 +97,7 @@ public static class PlayerCameraPatch
             return;
 
         _pinyinFilterCache = filter;
+        _savedRecipeFilter = filter;
         __instance.recipeFilter = "";
     }
 
@@ -104,6 +107,14 @@ public static class PlayerCameraPatch
     {
         var rawFilter = _pinyinFilterCache;
         _pinyinFilterCache = null;
+
+        // 恢复被 prefix 清空的 recipeFilter，确保关闭面板再打开后搜索状态不丢失
+        if (_savedRecipeFilter != null)
+        {
+            __instance.recipeFilter = _savedRecipeFilter;
+            _savedRecipeFilter = null;
+        }
+
         if (rawFilter == null)
             return;
 

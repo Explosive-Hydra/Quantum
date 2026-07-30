@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using Bark.BetterCCL;
+using Bark.Script;
 using Bark.Tool;
 using BepInEx;
 using BepInEx.Bootstrap;
@@ -51,8 +52,14 @@ public static class DebugScreen
         versionGroup.Add(new DebugInfo("quantum_version", $"Quantum v{Plugin.Version}"));
         if (MultiplayerRunning && Chainloader.PluginInfos.TryGetValue("KrokoshaCasualtiesMP", out var mpInfo))
             versionGroup.Add(new DebugInfo("mp_version", $"KrokoshaCasualtiesMP v{mpInfo.Metadata.Version}"));
-        versionGroup.Add(new DebugInfo("mod_count", LocaleOther("loading_mods", Chainloader.PluginInfos.Count)));
         _groups.Add(versionGroup);
+
+        var modsGroup = new DebugInfoGroup("mods", Side.Left);
+        modsGroup.Add(new DebugInfo("mod_count", LocaleOther("mods.mod_count", Chainloader.PluginInfos.Count)));
+        modsGroup.Add(new DebugInfo("script_count",
+            LocaleOther("mods.script_count", ScriptModLoader.LoadedScriptMods.Count,
+                ScriptModLoader.LoadedJavaScriptMods.Count, ScriptModLoader.LoadedLuaMods.Count)));
+        _groups.Add(modsGroup);
 
         var profilerGroup = new DebugInfoGroup("profiler", Side.Left);
         profilerGroup.Add(new DebugInfo("frame_time",
@@ -84,8 +91,6 @@ public static class DebugScreen
     {
         var world = WorldUtil.World;
         var body = BodyUtil.Body;
-        if (world == null || body == null)
-            return "";
 
         var lookPos = body.overrideLookTime >= 0
             ? body.overrideLookPos
@@ -257,7 +262,7 @@ public static class DebugScreen
             InfoSide = side;
         }
     }
-    
+
     private static string LocaleOther(string key, params object[] args)
     {
         return BetterLocale.GetOther($"{Plugin.NameSpace}.{LocaleKeyPre}.{key}", args);

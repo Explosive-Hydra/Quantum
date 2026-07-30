@@ -284,11 +284,19 @@ internal class LangGenerator : ModLangGenMultiBase
             "Отпустите Ctrl для сворачивания");
 
         // DebugScreen
-        Other("debug_screen.loading_mods",
+        // Mods
+        Other("debug_screen.mods.mod_count",
             "Loaded Mods: {0}",
             "加载模组: {0}",
             "載入模組: {0}",
             "Загружено модов: {0}");
+        Other("debug_screen.mods.script_count",
+            "Loaded Scripts: {0} / JS: {1} / Lua: {2}",
+            "加载脚本: {0} / JS: {1} / Lua: {2}",
+            "載入腳本: {0} / JS: {1} / Lua: {2}",
+            "Загружено Сценарий: {0} / JS: {1} / Lua: {2}");
+        
+        // Profiler
         Other("debug_screen.profiler.render",
             "Render Time: {0}",
             "渲染时间: {0}",
@@ -304,6 +312,8 @@ internal class LangGenerator : ModLangGenMultiBase
             "FPS: {0}",
             "FPS: {0}",
             "FPS: {0}");
+        
+        // World
         Other("debug_screen.world.position",
             "Position: ({0}, {1})",
             "坐标: ({0}, {1})",
