@@ -6,17 +6,18 @@
 
 [GitHub](https://github.com/CNCUMC/Quantum) | [NexusMods](https://www.nexusmods.com/scavprototype/mods/365)
 
-_A quality-of-life mod for [Casualties Unknown](https://store.steampowered.com/app/4576490/) —
-crafting search, container sorting, gun modifiers, and gameplay tweaks, all configurable from the in-game settings
-menu._
+_A quality-of-life mod for [Casualties Unknown](https://store.steampowered.com/app/4576490/) — crafting search,
+container sorting, gun modifiers, and gameplay tweaks, all configurable from the in-game settings menu._
 
 **This mod supports Russian (thanks @Crescia1949!)**
 
-_He is not a native speaker of Russian. If you have any suggestions, please report them promptly in the `NexusMods post` or `GitHub issues`._
+_He is not a native speaker of Russian. If you have any suggestions, please report them promptly in the `NexusMods post`
+or `GitHub issues`._
 
 **Этот мод поддерживает русский язык (спасибо @Crescia1949!)**
 
-_Он не является носителем русского языка. Если у вас есть какие-либо предложения, пожалуйста, незамедлительно сообщите о них в разделе `NexusMods post` или `GitHub issues`._
+_Он не является носителем русского языка. Если у вас есть какие-либо предложения, пожалуйста, незамедлительно сообщите о
+них в разделе `NexusMods post` или `GitHub issues`._
 
 ---
 
@@ -25,7 +26,7 @@ _Он не является носителем русского языка. Ес
 | Feature                         | Description                                                                                         |
 |---------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Ctrl + Shift Hover**          | Expanded item info panel (recipes, usable flags, ignore depression)                                 |
-| **Pinyin Recipe Search**        | Search crafting recipes by pinyin initials (`bd` → 绷带) or full pinyin                               |
+| **Pinyin Recipe Search**        | Search crafting recipes by pinyin initials (`bd` → 绷带) or full pinyin                             |
 | **Container Sort**              | Sort inventory by name / value / weight (ascending / descending) with sort buttons                  |
 | **Total Value Display**         | Shows total item value next to weight in the inventory bar                                          |
 | **Ammunition HUD**              | Real-time current / max ammo display above the gun menu (auto-hides in menus / pause)               |
@@ -60,7 +61,8 @@ _Он не является носителем русского языка. Ес
 
 ## Settings
 
-All options are in the game's settings menu (powered by [CUCoreLib](https://github.com/jimmyking9999999/CUCoreLib) & [Bark](https://github.com/CNCUMC/Bark)):
+All options are in the game's settings menu (powered
+by [CUCoreLib](https://github.com/jimmyking9999999/CUCoreLib) & [Bark](https://github.com/CNCUMC/Bark)):
 
 - **Quantum** tab — gun modifiers, gameplay tweaks, UI toggles
 - **Video** tab — info display, candidate limits, demo tips

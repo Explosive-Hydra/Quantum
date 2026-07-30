@@ -38,11 +38,10 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AUtils_002Ecs_002Fl_003AC_0021_003FUsers_003FAdministrator_003FAppData_003FRoaming_003FJetBrains_003FRider2026_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fab887c07f51841c98ea015c9c29ae1afd6a00_003F0d_003Fd83dd727_003FUtils_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AWorldGeneration_002Ecs_002Fl_003AC_0021_003FUsers_003FAdministrator_003FAppData_003FRoaming_003FJetBrains_003FRider2026_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fab887c07f51841c98ea015c9c29ae1afd6a00_003F92_003Ff3aba753_003FWorldGeneration_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
-  &lt;Assembly Path="F:\SteamLibrary\steamapps\common\Casualties Unknown Demo\CasualtiesUnknown_Data\Managed\Assembly-CSharp.dll" /&gt;&#xD;
   &lt;Assembly Path="F:\SteamLibrary\steamapps\common\Casualties Unknown Demo\BepInEx\plugins\Bark\Bark.dll" /&gt;&#xD;
   &lt;Assembly Path="E:\MossProject\CasualtiesUnknown\Quantum\BepInEx\plugins\TinyPinyin.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\Administrator\.nuget\packages\bepinex.baselib\5.4.20\lib\net35\BepInEx.dll" /&gt;&#xD;
   &lt;Assembly Path="F:\SteamLibrary\steamapps\common\Casualties Unknown Demo\BepInEx\plugins\CUCoreLib.dll" /&gt;&#xD;
-  &lt;Assembly Path="E:\Downloads\CUZoomPlus.dll" /&gt;&#xD;
+  &lt;Assembly Path="F:\SteamLibrary\steamapps\common\Casualties Unknown Demo\CasualtiesUnknown_Data\Managed\Assembly-CSharp.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	</wpf:ResourceDictionary>

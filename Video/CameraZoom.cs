@@ -187,14 +187,20 @@ public static class CameraZoom
 
             _zoomText = textObj.AddComponent<TextMeshProUGUI>();
             _zoomText.alignment = TextAlignmentOptions.Center;
-            _zoomText.font = TextUtil.RetroGamingTMP;
+            if (TextUtil.RetroGamingTMP != null)
+                _zoomText.font = TextUtil.RetroGamingTMP;
             _zoomText.fontSize = 32;
         }
 
-        _zoomText.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, AmmunitionUi.AmunitionUiObject.transform.position.y - 128);
+        if (_zoomText == null)
+            return;
+
+        if (AmmunitionUi.AmunitionUiObject != null)
+            _zoomText.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, AmmunitionUi.AmunitionUiObject.transform.position.y - 128);
+
         _zoomText.text = $"{_currentZoomMultiplier:F1}x";
-        _zoomText.alpha = HiddenHud.Hidden 
-            ? 0f 
+        _zoomText.alpha = HiddenHud.Hidden
+            ? 0f
             : 1f;
     }
 

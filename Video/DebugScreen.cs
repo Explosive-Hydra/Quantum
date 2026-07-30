@@ -63,11 +63,11 @@ public static class DebugScreen
 
         var worldGroup = new DebugInfoGroup("world", Side.Left);
         worldGroup.Add(new DebugInfo("position", LocaleOther("world.position",
-            PlayerUtil.Body.transform.position.x.ToString("F2"),
-            PlayerUtil.Body.transform.position.y.ToString("F2"))));
+            BodyUtil.Body.transform.position.x.ToString("F2"),
+            BodyUtil.Body.transform.position.y.ToString("F2"))));
         worldGroup.Add(new DebugInfo("looking_position", LocaleOther("world.looking_position",
-            PlayerUtil.Body.overrideLookPos.x.ToString("F2"),
-            PlayerUtil.Body.overrideLookPos.y.ToString("F2"))));
+            BodyUtil.Body.overrideLookPos.x.ToString("F2"),
+            BodyUtil.Body.overrideLookPos.y.ToString("F2"))));
         worldGroup.Add(new DebugInfo("target_block", GetTargetBlockText()));
         worldGroup.Add(new DebugInfo("layer", LocaleOther("world.layer", (WorldUtil.World.biomeDepth + 1).ToString())));
         _groups.Add(worldGroup);
@@ -83,7 +83,7 @@ public static class DebugScreen
     private static string GetTargetBlockText()
     {
         var world = WorldUtil.World;
-        var body = PlayerUtil.Body;
+        var body = BodyUtil.Body;
         if (world == null || body == null)
             return "";
 

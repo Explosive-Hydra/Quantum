@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Bark.BetterCCL;
+using Bark.Event;
 using Bark.Tool;
 using BepInEx;
 using BepInEx.Logging;
@@ -13,12 +14,12 @@ namespace Quantum;
 
 [BepInPlugin(Guid, Name, Version)]
 [BepInDependency("net.cucorelib", "1.0.3")]
-[BepInDependency("org.cncumc.bark", "1.1.1")]
+[BepInDependency("org.cncumc.bark", "2.0.1")]
 public class Plugin : BaseUnityPlugin
 {
     public const string Guid = "org.cncumc.quantum";
     public const string Name = "Quantum";
-    public const string Version = "1.1.1";
+    public const string Version = "1.2.0";
     internal const string NameSpace = "quantum";
     internal new static ManualLogSource Logger;
     private readonly Harmony _harmony = new(Guid);
@@ -117,10 +118,8 @@ public class Plugin : BaseUnityPlugin
 
         BetterLocale.Flush();
         _harmony.PatchAll();
-
-        UpdateUtil.Check("CNCUMC/Quantum", Name, Version, Logger);
     }
-
+    
     private static void QuantumBool(string key, bool value, Action<bool> set)
     {
         BetterOptions.Bool(NameSpace, key, Name, value, set);
